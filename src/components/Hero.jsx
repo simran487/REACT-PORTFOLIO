@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Resume from "../assets/pdf_files/Resume.pdf"; // Your PDF file
 
 const Hero = () => {
-  const nameText = "Hii, I'm Simran";
+  const nameText = "Hi, I'm Simran";
   const messages = [
     "I'm a passionate AI & ML student",
     "Aspiring Full-Stack Developer",
@@ -15,23 +15,17 @@ const Hero = () => {
   const [charIndex, setCharIndex] = useState(0);
   const [nameDone, setNameDone] = useState(false);
 
-  // Typewriter effect for name
+  // Typewriter effect for name (fixed)
   useEffect(() => {
-    let index = 0;
-    const interval = setInterval(() => {
-      if (index < nameText.length) {
-         
-        setDisplayedName((prev) => prev + nameText.charAt(index));
-       
-        index++;
-      } else {
-        clearInterval(interval);
-        setNameDone(true);
-      }
-    }, 150);
-
-    return () => clearInterval(interval);
-  }, []);
+    if (displayedName.length < nameText.length) {
+      const timeout = setTimeout(() => {
+        setDisplayedName((prev) => prev + nameText.charAt(prev.length));
+      }, 150);
+      return () => clearTimeout(timeout);
+    } else if (!nameDone) {
+      setNameDone(true);
+    }
+  }, [displayedName, nameText, nameDone]);
 
   // Typewriter loop for subtitle
   useEffect(() => {
