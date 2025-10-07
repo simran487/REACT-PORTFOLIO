@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Resume from "../assets/pdf_files/resume.pdf"; // Your PDF file
+import Resume from "../assets/pdf_files/Resume.pdf"; // Your PDF file
 
 const Hero = () => {
   const nameText = "Hii, I'm Simran";
