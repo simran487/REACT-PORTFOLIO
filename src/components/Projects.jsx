@@ -121,7 +121,7 @@ const Projects = () => {
 
       {/* Modal for Playable Game */}
       {showModal && (
-        <div className="fixed inset-0 bg-black bg-opacity-70 backdrop-blur-sm flex items-center justify-center z-50">
+        <div className="fixed inset-0 flex items-center justify-center z-50">
           <div className="relative bg-white rounded-lg shadow-2xl w-11/12 md:w-3/4 h-[80vh] overflow-hidden">
             <button
               onClick={closeModal}

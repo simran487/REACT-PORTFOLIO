@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+/* Enable smooth scrolling for the whole page */
+html {
+  scroll-behavior: smooth;
+}
+
 /* Gradient animation keyframes */
 @keyframes gradientShift {
   0% { background-position: 0% 50%; }
