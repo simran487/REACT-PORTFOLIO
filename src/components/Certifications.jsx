@@ -14,7 +14,7 @@ const Certifications = () => {
   return (
     <section
       id="certifications"
-      className="bg-gray-100 px-4 py-8" // reduced padding and removed min-h-screen
+      className="bg-gray-100 px-4 py-20" // reduced padding and removed min-h-screen
     >
       <div className="max-w-6xl mx-auto text-center">
         <h2 className="text-4xl font-bold text-gray-800 mb-12">Certifications</h2>

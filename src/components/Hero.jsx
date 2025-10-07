@@ -20,7 +20,9 @@ const Hero = () => {
     let index = 0;
     const interval = setInterval(() => {
       if (index < nameText.length) {
+         
         setDisplayedName((prev) => prev + nameText.charAt(index));
+       
         index++;
       } else {
         clearInterval(interval);

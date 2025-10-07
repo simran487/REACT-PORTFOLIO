@@ -31,7 +31,7 @@ const CodingPlatforms = () => {
   return (
     <section
       id="codingplatforms"
-      className="bg-gray-50 px-4 py-10" // reduced padding, removed min-h-screen
+      className="bg-gray-50 px-4 py-20" // reduced padding, removed min-h-screen
     >
       <div className="max-w-6xl mx-auto text-center">
         <h2 className="text-4xl font-bold text-gray-800 mb-8">

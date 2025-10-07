@@ -3,7 +3,7 @@ import { FaLinkedin, FaGithub, FaTwitter, FaEnvelope } from 'react-icons/fa';
 
 const Contact = () => {
   return (
-    <section id="contact" className="bg-gray-100 px-4 py-10"> {/* Reduced padding, removed min-h-screen */}
+    <section id="contact" className="bg-gray-100 px-4 py-20"> 
       <div className="max-w-3xl mx-auto text-center">
         <h2 className="text-4xl font-bold text-gray-800 mb-6">Contact Me</h2> {/* Reduced mb */}
         <p className="text-gray-600 mb-8">
