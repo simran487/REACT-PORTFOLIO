@@ -1,4 +1,6 @@
 import React from 'react';
+import SectionTitle from '../common/SectionTitle';
+import PlatformCard from './PlatformCard';
 
 const platforms = [
   {
@@ -29,27 +31,20 @@ const platforms = [
 
 const CodingPlatforms = () => {
   return (
-    <section
-      id="codingplatforms"
-      className="bg-gray-50 px-4 py-20" // reduced padding, removed min-h-screen
-    >
+    <section id="codingplatforms" className="bg-gray-50 px-4 py-20">
       <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-4xl font-bold text-gray-800 mb-8">
-          Coding Platforms
-        </h2>
+        {/* Section Title Component */}
+        <SectionTitle title="Coding Platforms" />
+
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
           {platforms.map((platform, index) => (
-            <a
+            <PlatformCard
               key={index}
-              href={platform.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`flex flex-col items-center justify-center p-5 rounded-lg shadow-lg hover:scale-105 transition transform ${platform.bgColor} text-white`}
-            >
-              <span className="text-3xl font-bold mb-2">{platform.name.charAt(0)}</span>
-              <h3 className="text-xl font-semibold">{platform.name}</h3>
-              <p className="text-sm mt-1">{platform.username}</p>
-            </a>
+              name={platform.name}
+              username={platform.username}
+              link={platform.link}
+              bgColor={platform.bgColor}
+            />
           ))}
         </div>
       </div>
